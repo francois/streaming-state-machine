@@ -1,4 +1,4 @@
-package seevibes
+package seevibes.machine
 
 import org.joda.time.ReadableInstant
 
@@ -7,4 +7,5 @@ trait State {
     def addKeyword(keyword: String, now: ReadableInstant): State
     def tick(now: ReadableInstant): State
     def keywords: Set[String]
+    def isStreaming: Boolean
 }

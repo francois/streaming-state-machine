@@ -1,17 +1,17 @@
-package seevibes
+package seevibes.machine
 
 import org.scalatest.Assertions
 import org.junit.Test
 import java.util.concurrent.TimeUnit
 import org.joda.time.{Duration, Instant}
 
-class StreamingStateMachineTest extends Assertions {
+class StateMachineTest extends Assertions {
     val KEY1 = Set("a")
     val KEY2 = Set("b")
 
-    val oneMinute = new Duration(TimeUnit.MINUTES.toMillis(1))
-    val twoMinutes = new Duration(TimeUnit.MINUTES.toMillis(2))
-    val threeMinutes = new Duration(TimeUnit.MINUTES.toMillis(3))
+    val oneMinute = new Duration(TimeUnit.SECONDS.toMillis(1))
+    val twoMinutes = new Duration(TimeUnit.SECONDS.toMillis(2))
+    val threeMinutes = new Duration(TimeUnit.SECONDS.toMillis(3))
 
     val now = new Instant()
     val oneMinuteAgo = now.minus(oneMinute)
